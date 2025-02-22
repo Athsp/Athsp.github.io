@@ -4,120 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Developer Portfolio</title>
-<!--     <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #FFA500;
-            color:#000035;
-            padding: 10px 0;
-            text-align: center;
-        }
-       nav {
-            width: 100%;
-            position: fixed;
-            background-color:none;
-            top: 0; /* Add this line to fix the position to the top */
-        }
-        nav ul {
-            list-style: none;
-            padding: 10px 0;
-            text-align: right;
-            background-color: none;
-            margin: 0;
-            position: fixed;
-            right: 0; /* Add this line to fix the position to the right side */
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #020036;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: #fff;
-            
-            width: 100%;
-            bottom: 0;
-        }
-            @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-    </style>
+        
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-             <li><a href="#achievement">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffaa00; position: fixed; width:100%; z-index: 100;" id="navbar">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Atharva Patil" style="height: 40px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about" style="font-weight: bold; color: #073260;">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects" style="font-weight: bold; color: #073260;">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" style="font-weight: bold; color: #073260;">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#achievement" style="font-weight: bold; color: #073260;">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" style="font-weight: bold; color: #073260;">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <header>
-        <h1 class="fade-in">Atharva Patil</h1>
-        <p class="fade-in">PHP Developer</p>
+    <script>
+        window.addEventListener("scroll", function () {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = "rgba(255, 170, 0, 0.8)"; // Change to desired color
+            } else {
+                navbar.style.backgroundColor = "#ffaa00"; // Default state
+            }
+        });
+    </script>
+    
+    <header class="jumbotron text-center" style="padding-top:120px;">
+        <h1 class="fade-in">I am Atharva Patil</h1>
+        <p class="fade-in">Software Developer</p>
+
+        <style>
+            .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation ease 5s;
+            animation-fill-mode: forwards;
+            
+            }
+
+            @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+            }
+        </style>
     </header>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate PHP Laravel Developer with experience in full-stack development, specializing in backend API development, payment integrations, and database management. With 1.6 years of experience, I have worked on fintech applications, automation tools, and web platforms that enhance user experience and performance. My ability to troubleshoot, optimize, and build scalable applications makes me a valuable asset in the development process.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-            </li>
-            <li>
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-            </li>
-        </ul>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul><li>Languages & Frameworks: PHP, Laravel, Python, Django, Angular</li>
-<li>Databases: MySQL, PhpMyAdmin</li>
-<li>Development Skills: API Integration, SQL, Backend Development, Frontend Enhancements</li>
-<li>Other Skills: Software Troubleshooting, Product Development, Documentation</li>
-        </ul>
-    </section>
-    <section id="achievement">
-        <h2>Achievement</h2>
-        <ul>
-        <li>Designed IEEE Bombay logo, incorporating mission-driven elements.</li>
-<li>Recognized for research in DoSCI 2024 for the <a href="https://www.researchgate.net/publication/380836730_Development_to_Easy_Grammar_Android_App_for_Deaf_Students" target="_blank">Easy Grammar app</a>.</li>
-        </ul>
-    </section>
-    <section id="contact" style="padding-bottom:20px;">
-        <h2>Contact</h2>
-        <p>Email: ath.patil27@gmail.com</p>
-    </section>
-    <footer>
+    <div class="container">
+        <section id="about" class="my-5" style="border-radius: 10px; background-color: rgba(172, 171, 170, 0.8); padding: 20px;">
+            <h2>About Me</h2>
+            <p>I am a passionate PHP Laravel Developer with experience in full-stack development, specializing in backend API development, payment integrations, and database management. I have worked on fintech applications, automation tools, and web platforms that enhance user experience and performance. My ability to troubleshoot, optimize, and build scalable applications makes me a valuable asset in the development process.</p>
+        </section>
+    </div>
+    <div class="container">
+        <section id="projects" class="my-5" style="border-radius: 10px; background-color: rgba(172, 171, 170, 0.8); padding: 20px;">
+            <h2>Projects</h2>
+            <ul class="list-unstyled">
+                <li class="media my-4">
+                    <div class="media-body">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1.</p>
+                    </div>
+                </li>
+                <li class="media my-4">
+                    <div class="media-body">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        </div>
+        <div class="container">
+        <section id="skills" class="my-5" style="border-radius: 10px; background-color: rgba(172, 171, 170, 0.8); padding: 20px;">
+            <h2>Skills</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Languages & Frameworks: PHP, Laravel, Python, Django, Angular</li>
+                <li class="list-group-item">Databases: MySQL, PhpMyAdmin</li>
+                <li class="list-group-item">Development Skills: API Integration, SQL, Backend Development, Frontend Enhancements</li>
+                <li class="list-group-item">Other Skills: Software Troubleshooting, Product Development, Documentation</li>
+            </ul>
+        </section>
+        </div>
+        <div class="container">
+        <section id="achievement" class="my-5" style="border-radius: 10px; background-color: rgba(172, 171, 170, 0.8); padding: 20px;">
+            <h2>Achievements</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Designed IEEE Bombay logo, incorporating mission-driven elements.</li>
+                <li class="list-group-item">Recognized for research in DoSCI 2024 for the <a href="https://www.researchgate.net/publication/380836730_Development_to_Easy_Grammar_Android_App_for_Deaf_Students" target="_blank">Easy Grammar app</a>.</li>
+            </ul>
+        </section>
+        </div>
+        <div class="container">
+        <section id="contact" class="my-5" style="border-radius: 10px; background-color: rgba(172, 171, 170, 0.8); padding: 20px;">
+            <h2>Contact</h2>
+            <p>Email: ath.patil27@gmail.com</p>
+        </section>
+    </div>
+    <footer class="text-center py-4">
         <p>&copy; Atharva Patil</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
